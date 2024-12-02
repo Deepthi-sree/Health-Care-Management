@@ -1,0 +1,215 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin: 20px;
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .link {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Patient Login</h2>
+        <form method="POST">
+            <div class="form-group">
+                <label for="phone_number">Phone Number</label>
+                <input type="text" id="phone_number" name="phone_number" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn">Login</button>
+        </form>
+
+        <div class="link">
+            <p>Don't have an account? <a href="/patient/signup">Sign up here</a></p>
+        </div>
+    </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Soft blue gradient */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            animation: fadeIn 1s ease-out; /* Fade-in effect */
+        }
+        .container {
+            max-width: 400px;
+            padding: 30px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+        }
+        h2 {
+            font-size: 2rem;
+            color: #2193b0;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: all 0.3s ease; /* Smooth transition */
+        }
+        input:focus {
+            border-color: #1abc9c;
+            box-shadow: 0 0 5px rgba(26, 188, 156, 0.5); /* Focus effect */
+        }
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #1abc9c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #16a085; /* Hover effect */
+        }
+        .link {
+            margin-top: 20px;
+        }
+        .link a {
+            color: #2193b0;
+            text-decoration: none;
+            transition: color 0.3s ease; /* Smooth transition for hover */
+        }
+        .link a:hover {
+            color: #16a085; /* Hover effect on link */
+            text-decoration: underline;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Fade-out effect */
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Patient Login</h2>
+        <form method="POST">
+            <div class="form-group">
+                <label for="phone_number">Phone Number</label>
+                <input type="text" id="phone_number" name="phone_number" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn">Login</button>
+        </form>
+
+        <div class="link">
+            <p>Don't have an account? <a href="/patient/signup">Sign up here</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Example of fade-out animation on page load (you can trigger this however you like)
+        window.addEventListener("load", () => {
+            document.body.style.animation = "fadeIn 1s ease-out"; // Apply fade-in effect
+        });
+    </script>
+</body>
+</html>
+

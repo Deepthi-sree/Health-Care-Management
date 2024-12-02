@@ -1,0 +1,207 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Prescriptions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        form {
+            width: 100%;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .back-link a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Update Prescriptions</h1>
+        <form action="{{ url_for('update_prescriptions', patient_id=patient['id']) }}" method="POST">
+            <div class="form-group">
+                <label for="prescriptions">Enter Updated Prescriptions:</label>
+                <textarea id="prescriptions" name="prescriptions" rows="6" placeholder="Enter prescriptions here...">{{ patient['prescriptions'] }}</textarea>
+            </div>
+            <button type="submit">Update Prescriptions</button>
+        </form>
+        <div class="back-link">
+            <a href="{{ url_for('patient_details', patient_id=patient['id']) }}">Back to Patient Details</a>
+        </div>
+    </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Prescriptions</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Soft gradient */
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 40px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            border-top: 5px solid #1abc9c; /* Teal accent */
+            text-align: center;
+            animation: fadeIn 1s ease-out; /* Fade-in effect */
+        }
+        h1 {
+            font-size: 2.2rem;
+            color: #2193b0;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        form {
+            text-align: left;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+            font-size: 16px;
+        }
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            resize: vertical;
+            transition: border 0.3s ease;
+        }
+        textarea:focus {
+            border: 1px solid #1abc9c; /* Teal border on focus */
+            outline: none;
+        }
+        button {
+            background-color: #1abc9c;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #16a085; /* Darker teal on hover */
+        }
+        button:active {
+            transform: translateY(2px); /* Subtle press effect */
+        }
+        .back-link {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .back-link a {
+            color: #2193b0;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .back-link a:hover {
+            text-decoration: underline;
+            color: #1abc9c;
+        }
+        /* Subtle animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Update Prescriptions</h1>
+        <form action="{{ url_for('update_prescriptions', patient_id=patient['id']) }}" method="POST">
+            <div class="form-group">
+                <label for="prescriptions">Enter Updated Prescriptions:</label>
+                <textarea id="prescriptions" name="prescriptions" rows="6" placeholder="Enter prescriptions here...">{{ patient['prescriptions'] }}</textarea>
+            </div>
+            <button type="submit">Update Prescriptions</button>
+        </form>
+        <div class="back-link">
+            <a href="{{ url_for('patient_details', patient_id=patient['id']) }}">Back to Patient Details</a>
+        </div>
+    </div>
+</body>
+</html>

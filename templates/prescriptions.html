@@ -1,0 +1,110 @@
+<!-- prescriptions.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prescriptions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        .details {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Prescriptions</h2>
+        <div class="details">
+            <p><strong>Prescription Details:</strong> {{ prescriptions['prescriptions'] }}</p>
+        </div>
+    </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescriptions</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Soft gradient */
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 40px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            border-top: 5px solid #1abc9c; /* Teal accent */
+            text-align: center;
+            animation: fadeIn 1s ease-out; /* Fade-in effect */
+        }
+        h2 {
+            font-size: 2.2rem;
+            color: #2193b0;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .details {
+            background-color: #f0f9ff; /* Light blue background */
+            padding: 25px;
+            border: 1px solid #d1e7f1;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .details:hover {
+            transform: translateY(-5px); /* Hover effect */
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+        }
+        .details p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+        .details strong {
+            color: #1abc9c; /* Teal color for emphasis */
+            font-weight: 600;
+        }
+        /* Subtle animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Prescriptions</h2>
+        <div class="details">
+            <p><strong>Prescription Details:</strong> {{ prescriptions['prescriptions'] }}</p>
+        </div>
+    </div>
+</body>
+</html>

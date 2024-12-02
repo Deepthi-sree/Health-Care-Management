@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.rolecontainer {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333333;
+}
+
+.role-box-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.role-box {
+    margin: 0 10px;
+}
+
+.role-button {
+    display: block;
+    padding: 15px 30px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.role-button:hover {
+    background-color: #0056b3;
+}
+
+.patient-box .role-button {
+    background-color: #28a745;
+}
+
+.patient-box .role-button:hover {
+    background-color: #218838;
+}
+
+.doctor-box .role-button {
+    background-color: #17a2b8;
+}
+
+.doctor-box .role-button:hover {
+    background-color: #117a8b;
+}
+
+/* Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 600px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.flash-success {
+    color: green;
+}
+
+.flash-danger {
+    color: red;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f2f2f2;
+}
+
+.login-container {
+    width: 300px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    color: #555555;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.flash-messages {
+    margin-top: 10px;
+    padding: 10px;
+    color: red;
+    font-size: 14px;
+}

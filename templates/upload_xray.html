@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload X-ray Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        form {
+            width: 100%;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="file"] {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .back-link a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload X-ray Document</h1>
+        <form action="{{ url_for('upload_xray', patient_id=patient['id']) }}" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="xray_file">Select X-ray Document:</label>
+                <input type="file" id="xray_file" name="xray_file" accept=".jpg, .jpeg, .png, .pdf" required>
+            </div>
+            <button type="submit">Upload X-ray</button>
+        </form>
+        <div class="back-link">
+            <a href="{{ url_for('patient_details', patient_id=patient['id']) }}">Back to Patient Details</a>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,105 @@
+<!-- doctors_visited.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctors Visited</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        .details {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Doctors Visited</h2>
+        <div class="details">
+            <p><strong>Doctors:</strong> {{ doctors_visited['doctors_visited'] }}</p>
+        </div>
+    </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctors Visited</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #74ebd5, #9face6); /* Soft gradient background */
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 40px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: fadeIn 1s ease-out forwards; /* Fade-in effect */
+        }
+        h2 {
+            font-size: 2.2rem;
+            color: #3498db; /* Blue */
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .details {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s ease;
+        }
+        .details:hover {
+            transform: translateY(-3px); /* Slight lift effect */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        .details p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+        .details strong {
+            color: #333;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Doctors Visited</h2>
+        <div class="details">
+            <p><strong>Doctors:</strong> {{ doctors_visited['doctors_visited'] }}</p>
+        </div>
+    </div>
+</body>
+</html>

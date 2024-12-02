@@ -1,0 +1,140 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Doctor Login</h2>
+        <form method="POST" action="{{ url_for('doctor_page') }}">
+            <label for="unique_id">Patient Unique ID:</label>
+            <input type="text" id="unique_id" name="unique_id" required><br><br>
+
+            <label for="password">Patient Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <button type="submit">View Patient Details</button>
+        </form>
+        
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Login</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Soft blue gradient */
+            color: #333;
+        }
+        .login-container {
+            max-width: 500px;
+            margin: 100px auto;
+            padding: 40px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            border-top: 5px solid #1abc9c; /* Teal accent */
+            opacity: 0; /* Initially hidden */
+            animation: fadeIn 1s ease-out forwards; /* Fade in effect */
+        }
+        h2 {
+            font-size: 2.2rem;
+            color: #2193b0;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        label {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #4a4a4a;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #333;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        input:focus {
+            border-color: #1abc9c; /* Teal border on focus */
+            box-shadow: 0 0 8px rgba(26, 188, 156, 0.5); /* Soft glow effect */
+            outline: none; /* Remove default outline */
+        }
+        button {
+            background-color: #1abc9c; /* Teal */
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s ease;
+        }
+        button:hover {
+            background-color: #16a085; /* Darker teal on hover */
+            transform: translateY(-3px); /* Slight lift effect */
+        }
+        .login-container form {
+            text-align: left;
+        }
+        
+        /* Fade in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Fade out animation */
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Doctor Login</h2>
+        <form method="POST" action="{{ url_for('doctor_page') }}">
+            <label for="unique_id">Patient Unique ID:</label>
+            <input type="text" id="unique_id" name="unique_id" required><br>
+
+            <label for="password">Patient Password:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <button type="submit">View Patient Details</button>
+        </form>
+    </div>
+
+    <script>
+        // Example for fade out effect when the page is being navigated away
+        window.addEventListener('beforeunload', function () {
+            document.querySelector('.login-container').style.animation = 'fadeOut 1s ease-out forwards';
+        });
+    </script>
+</body>
+</html>
